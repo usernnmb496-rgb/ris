@@ -1,0 +1,43 @@
+-- ═══════════════════════════════════════════════════════════
+-- 🎯 9rr — UI Only
+-- ═══════════════════════════════════════════════════════════
+
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+local repo = "https://raw.githubusercontent.com/deividcomsono/Obsidian/main/"
+local Library = loadstring(game:HttpGet(repo .. "Library.lua"))()
+
+-- ═══════════════════════════════════════════════════════════
+-- WINDOW (9rr style)
+-- ═══════════════════════════════════════════════════════════
+Library.ForceCheckbox = false
+
+local Window = Library:CreateWindow({
+    Title = "PTX",
+    Footer = "PTX GUCCI | FTAP",
+    Icon = 74482206150919,
+    NotifySide = "Right",
+    ShowCustomCursor = false,
+    EnableCompacting = true,
+    SidebarCompacted = true,
+    BackgroundImage = "rbxassetid://",
+})
+
+Window:SetCornerRadius(20)
+Library.ShowCustomCursor = true
+
+-- ═══════════════════════════════════════════════════════════
+-- MAIN TAB
+-- ═══════════════════════════════════════════════════════════
+local MainTab = Window:AddTab("Main", "house")
+local InfoGroup = MainTab:AddLeftGroupbox("Info", "info")
+
+InfoGroup:AddLabel("━━━━━━━━━━━━━━━━━━━━━━━━━━━━", true)
+InfoGroup:AddLabel("รันพาพ่อมึงออไอสัส • โปลิส รักยูริมากกกกกกกกก", true)
+InfoGroup:AddLabel("━━━━━━━━━━━━━━━━━━━━━━━━━━━━", true)
+
+Library.ToggleKeybind = Enum.KeyCode.RightShift
+
+print("รันพาพ่อมึงออไอสัส • โปลิส รักยูริมากกกกกกกกก")
+print("9rr UI Loaded")
